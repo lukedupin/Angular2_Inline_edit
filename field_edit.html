@@ -1,0 +1,20 @@
+<!-- Text input -->
+<template [ngIf]="input_type == 'input'">
+  <h1 *ngIf="label_type == 'h1' && !editing" (click)="toggleEdit()">{{ value | headerValue:custom_header }}</h1>
+  <h2 *ngIf="label_type == 'h2' && !editing" (click)="toggleEdit()">{{ value | headerValue:custom_header }}</h2>
+  <div *ngIf="label_type == 'div' && !editing" (click)="toggleEdit()">{{ value | headerValue:custom_header }}</div>
+
+  <input *ngIf="editing" [(ngModel)]="value" (blur)="updatedEdit();" (keypress)="updatedEdit( $event );" focusMe>
+</template>
+
+<!-- text area with markdown -->
+<template [ngIf]="input_type == 'textarea'">
+  <h1 *ngIf="label_type == 'h1' && (editing || !hide_header || value.charAt(0) != '#')" (click)="toggleEdit()">{{ custom_header }}</h1>
+  <h2 *ngIf="label_type == 'h2' && (editing || !hide_header || value.charAt(0) != '#')" (click)="toggleEdit()">{{ custom_header }}</h2>
+  <div *ngIf="label_type == 'div' && (editing || !hide_header || value.charAt(0) != '#')" (click)="toggleEdit()">{{ custom_header }}</div>
+
+  <div *ngIf="!editing" [innerHTML]="value | markDown" (click)="toggleEdit()"></div>
+  <div *ngIf="editing" class="textwrapper">
+    <textarea [(ngModel)]="value" (blur)="updatedEdit();" (keypress)="updatedEdit( $event );" focusMe rows="12"></textarea>
+  </div>
+</template>
