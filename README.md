@@ -40,10 +40,13 @@ Inside your main HTML, add micromarkdown.js.  Example:
 #### Usage
 
 A **h1** tag that converts into text area.  This example posts data to a URL, and then writes the updated value back to the name variable:
+
 `<field-edit [value]="name" [url]="'/url?url_variable_id='+ url_var.id" [post_data]="'action=update&name=%%%'" [custom_header]="'User name -- %%%'" (value_updated)="name = $event;"></field-edit>`
 
-Display content in Markdown, when editing, show a textarea.  This version also posts data to a remote server
+Display content in Markdown, when editing, show a textarea.  This version also posts data to a remote server:
+
 `<field-edit [value]="container.desc" [url]="'/alter_container?container_id='+ container.id" [post_data]="'action=update&desc=%%%'" [label_type]="'h2'" [input_type]="'textarea'" (value_updated)="container.desc = $event;"></field-edit>`
 
 This version makes a javascript call when the editing is completed:
+
 `<field-edit [value]="s.scope" [label_type]="'div'" [custom_header]="'[%%%]'" (value_updated)="updateScope( s.scope, $event)"></field-edit>`
