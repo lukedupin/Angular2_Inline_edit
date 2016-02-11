@@ -1,4 +1,4 @@
-# Angular2 Inline edit
+# Angular2 Inline content editing
 This module is written for Angular2 to smoothly edit div's, and then post those results back to an API.  The goal is to modularize common field editing to avoid cluttering the rest of your code.
 
 
@@ -68,3 +68,9 @@ This version makes a javascript call when the editing is completed:
 **textarea edit mode**
 
 ![Screen shot](http://i.imgur.com/gEpIm2e.png)
+
+
+#### Sources
+
+Special thanks for the markdown library
+https://github.com/SimonWaldherr/micromarkdown.js
