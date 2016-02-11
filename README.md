@@ -55,11 +55,11 @@ This version makes a javascript call when the editing is completed:
 
 **Input view mode**
 
-![Screen shot](http://i.imgur.com/Xbi5kx5.png)
+![Screen shot](http://i.imgur.com/y7t8wtY.png)
 
 **Input edit mode**
 
-![Screen shot](http://i.imgur.com/y7t8wtY.png)
+![Screen shot](http://i.imgur.com/Xbi5kx5.png)
 
 **textarea Markdown mode**
 
